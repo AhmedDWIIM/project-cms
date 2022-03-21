@@ -11,16 +11,19 @@
 </template>
 
 <script>
+import {mapState} from "vuex";
 export default {
   name: 'HelloWorld',
   data(){
     return {
       name:"ahmed",
-      count:0,
     };
   },
   props: {
     msg: String
+  },
+  computed: {
+    ...mapState(["count"]),
   },
   methods:{
     addCount(){
